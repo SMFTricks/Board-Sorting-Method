@@ -219,6 +219,14 @@ class BoardSorting
 	{
 		global $context, $txt;
 
+		// Set default toggle
+		if (isset($context['board']['redirect']) && !empty($context['board']['redirect']))
+			addJavaScriptVar('bsm_redirect', 'true');
+
+		// JS file for the redirect stuff
+		loadJavaScriptFile('boardsorting_method.js', array('defer' => true));
+
+		// Language file
 		loadLanguage('BoardSorting/');
 
 		$options = '';
@@ -226,21 +234,21 @@ class BoardSorting
 		foreach ($this->_sorting_methods as $by => $sorting)
 		{
 			$options .= '
-				<option value="' . $by . '"' . ($context['board']['sorting_method'] == $by ? ' selected="selected"' : '') . '>' . $txt[(isset($sorting['label']) ? $sorting['label'] : $by)] . '</option>';
+				<option value="' . $by . '"' . (!empty($context['board']['sorting_method']) && $context['board']['sorting_method'] == $by ? ' selected="selected"' : '') . '>' . $txt[(isset($sorting['label']) ? $sorting['label'] : $by)] . '</option>';
 		}
 
 		// Sorting method
 		$context['custom_board_settings']['sorting_method'] = [
-			'dt' => '<label for="BoardSortingMethod"><strong>'. $txt['BoardSorting_method_default']. '</strong></label>',
+			'dt' => '<label for="BoardSortingMethod" id="BoardSortingMethod_label"><strong>'. $txt['BoardSorting_method_default']. '</strong></label>',
 			'dd' => '<select name="BoardSortingMethod" id="BoardSortingMethod">' . $options . '</select>',
 		];
 
 		// Sorting order
 		$context['custom_board_settings']['sorting_order'] = [
-			'dt' => '<label for="BoardSortingOrder"><strong>'. $txt['BoardSorting_method_order']. '</strong></label>',
+			'dt' => '<label for="BoardSortingOrder" id="BoardSortingOrder_label"><strong>'. $txt['BoardSorting_method_order']. '</strong></label>',
 			'dd' => '<select name="BoardSortingOrder" id="BoardSortingOrder">
-				<option value="desc"' . ($context['board']['sorting_order'] == 'desc' ? ' selected="selected"' : '') . '>' . $txt['BoardSorting_method_desc'] . '</option>
-				<option value="asc"' . ($context['board']['sorting_order'] == 'asc' ? ' selected="selected"' : '') . '>' . $txt['BoardSorting_method_asc'] . '</option>
+				<option value="desc"' . (!empty($context['board']['sorting_order']) && $context['board']['sorting_order'] == 'desc' ? ' selected="selected"' : '') . '>' . $txt['BoardSorting_method_desc'] . '</option>
+				<option value="asc"' . (!empty($context['board']['sorting_order']) && $context['board']['sorting_order'] == 'asc' ? ' selected="selected"' : '') . '>' . $txt['BoardSorting_method_asc'] . '</option>
 			</select>',
 		];
 	}

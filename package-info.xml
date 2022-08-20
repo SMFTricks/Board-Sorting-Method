@@ -24,6 +24,8 @@
 		<remove-file name="$sourcedir/Class-BoardSorting.php">Source Files</remove-file>
 		<!-- Language Files -->
 		<remove-dir name="$languagedir/BoardSorting">Language Files</remove-dir>
+		<!-- JavaScript File -->
+		<remove-file name="$themedir/scripts/boardsorting_method.js">JavaScript File</remove-file>
 		<!-- Hooks -->
 		<hook hook="integrate_pre_load" function="BoardSorting::hooks" file="$sourcedir/Class-BoardSorting.php" reverse="true" />
 		<!-- Database -->
