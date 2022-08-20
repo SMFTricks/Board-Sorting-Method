@@ -230,7 +230,7 @@ class BoardSorting
 		loadLanguage('BoardSorting/');
 
 		$options = '';
-		
+
 		foreach ($this->_sorting_methods as $by => $sorting)
 		{
 			$options .= '
@@ -239,7 +239,8 @@ class BoardSorting
 
 		// Sorting method
 		$context['custom_board_settings']['sorting_method'] = [
-			'dt' => '<label for="BoardSortingMethod" id="BoardSortingMethod_label"><strong>'. $txt['BoardSorting_method_default']. '</strong></label>',
+			'dt' => '<label for="BoardSortingMethod" id="BoardSortingMethod_label"><strong>'. $txt['BoardSorting_method_default']. '</strong></label><br>
+			<span class="smalltext">' . $txt['BoardSorting_method_order_desc'] . '</span>',
 			'dd' => '<select name="BoardSortingMethod" id="BoardSortingMethod">' . $options . '</select>',
 		];
 
