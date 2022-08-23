@@ -24,6 +24,7 @@ $smcFunc['db_add_column'](
 		'name' => 'sorting_method',
 		'type' => 'varchar',
 		'size' => 50,
+		'default' => '',
 		'not_null' => false,
 	]
 );
