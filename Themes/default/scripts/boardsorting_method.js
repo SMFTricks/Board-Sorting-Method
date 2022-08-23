@@ -21,7 +21,7 @@ if (bsm_redirect == true)
 }
 
 // Now toggle the display of the sorting method and order, depending on the redirect checkbox
-$("#redirect_enable").click(function() {
+$('#redirect_enable').click(function() {
 	// Check if they toggle checkbox
 	if (this.checked)
 	{

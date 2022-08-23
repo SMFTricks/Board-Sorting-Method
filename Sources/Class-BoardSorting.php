@@ -220,7 +220,7 @@ class BoardSorting
 		global $context, $txt;
 
 		// Set default toggle
-		addJavaScriptVar('bsm_redirect', '\'' . (isset($context['board']['redirect']) && !empty($context['board']['redirect']) ? 'true' : 'false') . '\'');
+		addJavaScriptVar('bsm_redirect', '\'' . (isset($context['board']['redirect']) && !empty($context['board']['redirect']) ? true : false) . '\'');
 
 		// JS file for the redirect stuff
 		loadJavaScriptFile('boardsorting_method.js', array('defer' => true));
