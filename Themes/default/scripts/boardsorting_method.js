@@ -12,7 +12,7 @@ let boardsorting_order_label = document.querySelector('#BoardSortingOrder_label'
 let boardsorting_order_input = document.querySelector('#BoardSortingOrder');
 
 // Toggle them if the checkbox is checked
-if (bsm_redirect)
+if (bsm_redirect == true)
 {
 	boardsorting_label.parentElement.style.display = "none";
 	boardsorting_input.parentElement.style.display = "none";
@@ -22,9 +22,11 @@ if (bsm_redirect)
 
 // Now toggle the display of the sorting method and order, depending on the redirect checkbox
 $("#redirect_enable").click(function() {
+	console.log("Clicked");
 	// Check if they toggle checkbox
 	if (this.checked)
 	{
+		console.log('Checked');
 		boardsorting_label.parentElement.style.display = "none";
 		boardsorting_input.parentElement.style.display = "none";
 		boardsorting_order_label.parentElement.style.display = "none";
