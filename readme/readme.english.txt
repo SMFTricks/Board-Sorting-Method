@@ -18,6 +18,7 @@
 
 [size=3][color=#358234]Localization[/color][/size]
 [img]https://www.simplemachines.org/site_images/lang/english.gif[/img] English
+[img]https://www.simplemachines.org/site_images/lang/russian.gif[/img] Russian by [url="https://www.simplemachines.org/community/index.php?action=profile;u=229017"]Bugo[/url]
 [hr]
 
 [size=3][url="https://github.com/SMFTricks/Board-Sorting-Method/blob/main/CHANGELOG.md"][color=#cc5d31]Changelog[/color][/url][/size]
