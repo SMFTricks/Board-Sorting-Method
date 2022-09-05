@@ -14,6 +14,7 @@ Board Sorting Method will provide the options to select a different default sort
 
 ### Localization
 - ![English](https://www.simplemachines.org/site_images/lang/english.gif) English
+- ![Russian](https://www.simplemachines.org/site_images/lang/russian.gif) Russian by [Bugo](https://www.simplemachines.org/community/index.php?action=profile;u=229017)
 ---
 ### [Changelog](https://github.com/SMFTricks/Board-Sorting-Method/blob/main/CHANGELOG.md)
 ### [GitHub](https://github.com/SMFTricks/Board-Sorting-Method)
